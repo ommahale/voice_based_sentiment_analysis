@@ -1,5 +1,4 @@
 # voice_based_sentiment_analysis
-<<<<<<< HEAD
 Deep Learning project for predicting emotions from voice using Tensorflow and Liberosa
 ## Introduction
 This project is backend for a voice based sentiment analysis application. The application is built using Tensorflow and Librosa. The model is trained on the RAVDESS dataset. The model is trained to predict 8 emotions namely angry, calm, fearful, happy, sad, surprised, neutral and disgust. The model is trained using a LTSM architecture. The model is trained on 5600 audio files. The model is trained for 100 epochs. The model is trained on a Local GPU Nvidia GForce 1660 Ti. The model is saved in the form of h5 file. The api is simply created using fast api
@@ -32,6 +31,3 @@ uvicorn main:app --reload
 ```
 The server will start on port 8000. The api can be accessed using the following url
 http://localhost:8000/swagger. This will open the swagger ui. The api can be tested using the swagger ui.
-=======
-Deep Learning project for predicting emotions from voice using Keras, Tensorflow and Liberosa
->>>>>>> d21f4a1882bfb0a671f450416407cf79cab0a94e
