@@ -1,2 +1,2 @@
 # voice_based_sentiment_analysis
-Deep Learning project for predicting emotions from voice using Tensorflow and Liberosa
+Deep Learning project for predicting emotions from voice using Keras, Tensorflow and Liberosa
