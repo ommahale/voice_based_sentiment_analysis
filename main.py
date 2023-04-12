@@ -1,8 +1,21 @@
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import librosa
 import keras
+origins = [
+    "http://localhost",
+    "http://localhost:8080",
+    "http://localhost:5173",
+]
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 model=keras.models.load_model('model.h5')
 
@@ -21,7 +34,7 @@ def predict(file: UploadFile = File(...)):
     for i in model.predict(mfcc):
         probab=max(i.tolist())
         res=np.argmax(i)
-        dict={'angry':0,'disgust':1,'fear':2,'happy':3,'neutral':4,'ps':5,'sad':6}
+        dict={'angry😠':0,'disgust🤮':1,'fear😓':2,'happy😄':3,'neutral🙂':4,'ps😇':5,'sad😞':6}
         value = [i for i in dict if dict[i]==res]
         output=value[0] 
     return {"result": output, "probability": probab}
