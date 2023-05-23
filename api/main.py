@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import librosa
 import keras
+import uvicorn
 origins = [
     "http://localhost",
     "http://localhost:8080",
@@ -39,3 +40,6 @@ def predict(file: UploadFile = File(...)):
         value = [i for i in dict if dict[i]==res]
         output=value[0] 
     return {"result": output, "probability": probab}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
