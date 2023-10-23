@@ -43,7 +43,17 @@ pip install -r requirements.txt
 ### Usage
 Run the following command to start the server
 ```bash
+cd api
 uvicorn main:app --reload
 ```
 The server will start on port 8000. The api can be accessed using the following url
 http://localhost:8000/swagger. This will open the swagger ui. The api can be tested using the swagger ui.
+
+<br/>
+
+Start the React app using following commands
+
+```bash
+npm i
+npm start
+``` 
