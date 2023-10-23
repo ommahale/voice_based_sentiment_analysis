@@ -20,6 +20,7 @@ app.add_middleware(
 )
 
 model=keras.models.load_model('model.h5')
+print("Model loaded")
 
 def extract_mfcc(filename):
     y,sr=librosa.load(filename,duration=3,offset=0.5)
@@ -42,4 +43,4 @@ def predict(file: UploadFile = File(...)):
     return {"result": output, "probability": probab}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="localhost", port=8000)
