@@ -4,6 +4,8 @@ import numpy as np
 import librosa
 import keras
 import uvicorn
+import sys
+
 origins = [
     "http://localhost",
     "http://localhost:8080",
@@ -43,4 +45,6 @@ def predict(file: UploadFile = File(...)):
     return {"result": output, "probability": probab}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+    print(sys.argv)
+    host, port  = sys.argv[1:]
+    uvicorn.run(app, host=host, port=int(port))

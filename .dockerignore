@@ -1,2 +1,4 @@
 api/model
+frontend/node_modules
 api/venv
+*__pycache__

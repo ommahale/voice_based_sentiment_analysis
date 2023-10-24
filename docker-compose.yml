@@ -4,3 +4,12 @@ services:
     build: ./api/
     ports:
       - "8000:8000"
+    volumes:
+      - ./api:/app/api
+  web:
+    build: ./frontend/
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    
