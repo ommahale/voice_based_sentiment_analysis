@@ -30,4 +30,4 @@ Run the following command to start the server
 uvicorn main:app --reload
 ```
 The server will start on port 8000. The api can be accessed using the following url
-http://localhost:8000/swagger. This will open the swagger ui. The api can be tested using the swagger ui.
+http://localhost:8000/swagger. This will open the swagger ui. The api can be tested using the 
