@@ -30,24 +30,24 @@ venv\Scripts\activate
 ```
 Linux:
 ```bash
-source venv/bin/activate
-```
-MacOS:
-```bash
-source venv/bin/activate
-```
-Install the dependencies
-```bash
-pip install -r requirements.txt
-```
-### Usage
-Run the following command to start the server
-```bash
-cd api
-uvicorn main:app --reload
-```
-The server will start on port 8000. The api can be accessed using the following url
-http://localhost:8000/swagger. This will open the swagger ui. The api can be tested using the swagger ui.
+# source venv/bin/activate
+# ```
+# MacOS:
+# ```bash
+# source venv/bin/activate
+# ```
+# Install the dependencies
+# ```bash
+# pip install -r requirements.txt
+# ```
+# ### Usage
+# Run the following command to start the server
+# ```bash
+# cd api
+# uvicorn main:app --reload
+# ```
+# The server will start on port 8000. The api can be accessed using the following url
+# http://localhost:8000/swagger. This will open the swagger ui. The api can be tested using the swagger ui.
 
 <br/>
 
